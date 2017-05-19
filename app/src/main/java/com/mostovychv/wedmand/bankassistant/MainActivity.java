@@ -1,10 +1,10 @@
 package com.mostovychv.wedmand.bankassistant;
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,9 +12,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.mostovychv.wedmand.bankassistant.fragments.ATMFragment;
+import com.mostovychv.wedmand.bankassistant.fragments.AviasFragment;
+import com.mostovychv.wedmand.bankassistant.fragments.HistoryFragment;
+import com.mostovychv.wedmand.bankassistant.fragments.NBUFragment;
+import com.mostovychv.wedmand.bankassistant.fragments.OddzialyFragment;
+import com.mostovychv.wedmand.bankassistant.fragments.PrivatBankFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    PrivatBankFragment fPrivatBank;
+    NBUFragment fNBU;
+    HistoryFragment fHistory;
+    OddzialyFragment fOddzialy;
+    ATMFragment fATM;
+    AviasFragment fAvias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +54,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        fATM = new ATMFragment();
+        fAvias = new AviasFragment();
+        fHistory = new HistoryFragment();
+        fNBU = new NBUFragment();
+        fOddzialy = new OddzialyFragment();
+        fPrivatBank = new PrivatBankFragment();
     }
 
     @Override
@@ -80,25 +101,39 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera)
+        FragmentTransaction ftrans = getFragmentManager().beginTransaction();
+
+        if (id == R.id.nav_privatBank)
         {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery)
+            ftrans.replace (R.id.container, fPrivatBank);
+        } else if (id == R.id.nav_NBU)
+        {
+            ftrans.replace (R.id.container, fNBU);
+
+        } else if (id == R.id.nav_historia)
+        {
+            ftrans.replace(R.id.container, fHistory);
+
+        } else if (id == R.id.nav_oddzialyBanku)
+        {
+            ftrans.replace(R.id.container, fOddzialy);
+
+        } else if (id == R.id.nav_bankomatyWplatomaty)
+        {
+            ftrans.replace(R.id.container, fATM);
+
+        } else if (id == R.id.nav_avias)
+        {
+            ftrans.replace(R.id.container, fAvias);
+
+        } else if (id == R.id.nav_mail)
         {
 
-        } else if (id == R.id.nav_slideshow)
-        {
-
-        } else if (id == R.id.nav_manage)
-        {
-
-        } else if (id == R.id.nav_share)
-        {
-
-        } else if (id == R.id.nav_send)
+        } else if (id == R.id.nav_info)
         {
 
         }
+        ftrans.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
