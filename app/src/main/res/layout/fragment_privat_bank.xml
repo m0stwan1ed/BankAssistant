@@ -21,16 +21,15 @@
         android:layout_marginEnd="8dp" />
 
     <TableLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:id="@+id/tableLayout"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPrivatBank"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCash"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp">
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -40,29 +39,29 @@
                 android:id="@+id/textViewCorner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:text=""
                 android:textSize="20sp"
                 tools:layout_editor_absoluteX="143dp"
-                tools:layout_editor_absoluteY="340dp"
-                android:layout_margin="5dp"/>
+                tools:layout_editor_absoluteY="340dp" />
 
             <TextView
                 android:id="@+id/textViewBuy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:text="Buy"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:layout_margin="5dp"/>
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textViewSell"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:text="Sell"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:layout_margin="5dp"/>
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -180,12 +179,229 @@
                 android:id="@+id/textViewCurrency4Buy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Currency4Buy"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewCurrency4Sell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency4Sell"
+                android:layout_margin="5dp"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewCash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cash Exchange"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrivatBank" />
+
+    <TextView
+        android:id="@+id/textViewCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card Exchange"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TableLayout
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/tableLayout2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCard">
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp">
+
+            <TextView
+                android:id="@+id/textViewCorner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text=""
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="143dp"
+                tools:layout_editor_absoluteY="340dp" />
+
+            <TextView
+                android:id="@+id/textViewCardsBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Buy"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewCardsSell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Sell"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp">
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency1"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency1Buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency1Buy"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency1Sell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency1Sell"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp">
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency2"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency2Buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency2Buy"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency2Sell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency2Sell"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp">
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency3"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency3Buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency3Buy"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency3Sell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency3Sell"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency4"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewCardsCurrency4Buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Currency4Buy"
                 android:layout_margin="5dp"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textViewCurrency4Sell"
+                android:id="@+id/textViewCardsCurrency4Sell"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Currency4Sell"

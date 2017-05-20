@@ -33,34 +33,42 @@ public class PrivatBankFragment extends android.app.Fragment
     TextView textViewCurrency1Buy, textViewCurrency2Buy, textViewCurrency3Buy, textViewCurrency4Buy;
     TextView textViewCurrency1Sell, textViewCurrency2Sell, textViewCurrency3Sell, textViewCurrency4Sell;
 
+    TextView textViewCardsCurrency1, textViewCardsCurrency2, textViewCardsCurrency3, textViewCardsCurrency4;
+    TextView textViewCardsCurrency1Buy, textViewCardsCurrency2Buy, textViewCardsCurrency3Buy, textViewCardsCurrency4Buy;
+    TextView textViewCardsCurrency1Sell, textViewCardsCurrency2Sell, textViewCardsCurrency3Sell, textViewCardsCurrency4Sell;
+
     ArrayList<PBCurrency> pbCurrency = new ArrayList<>();
+    ArrayList<PBCurrency> pbCurrencyCards = new ArrayList<>();
 
     class PobierzDane extends AsyncTask<Void, Void, Void>
     {
-        private String url;//Link do danych
-        private String answer = "";//Odpowiedź serwera
+        private String url;
+        private String url2;
+        private String answer = "";
+        private String answer2 = "";
         private Gson gson = new Gson();		// GSON library object
 
-        PobierzDane(String url)
+        PobierzDane(String url, String url2)
         {
             this.url = url;
-        }//Konstruktor klasy
+            this.url2 = url2;
+        }
 
-        protected void onPreExecute()//Metoda klasy AsyncTask, która wykonuje się przed uruchamieniem wątku
+        protected void onPreExecute()
         {
 
         }
 
         @Override
-        protected Void doInBackground(Void... params)//Metoda klasyAsyncTask, która wykonuje się w osobnym wątku
+        protected Void doInBackground(Void... params)
         {
             try
             {
-                URL u1 = new URL(url);//Zapisujemy link w postaci URL
-                URLConnection conn = u1.openConnection();//Tworzymy nowe połączenie
-                BufferedInputStream in = new BufferedInputStream(conn.getInputStream());//Otrzymujemy odpowiedź od serwera
+                URL u1 = new URL(url);
+                URLConnection conn = u1.openConnection();
+                BufferedInputStream in = new BufferedInputStream(conn.getInputStream());
 
-                //------Ten kod pozwala skonwertować BufferedInputStream w String
+
                 byte[] contents = new byte[1024];
                 int bytesRead;
 
@@ -68,7 +76,16 @@ public class PrivatBankFragment extends android.app.Fragment
                 {
                     answer += new String(contents, 0, bytesRead);
                 }
-                //------
+
+                URL u2 = new URL(url2);
+                URLConnection conn2 = u1.openConnection();
+                BufferedInputStream in2 = new BufferedInputStream(conn2.getInputStream());
+
+                while((bytesRead = in2.read(contents)) != -1)
+                {
+                    answer2 += new String(contents, 0, bytesRead);
+                }
+
             }
 
             catch (IOException e) {
@@ -80,13 +97,8 @@ public class PrivatBankFragment extends android.app.Fragment
         @Override
         protected void onPostExecute(Void result)
         {
-            System.out.println(answer);
             pbCurrency = new ArrayList<>(Arrays.asList(gson.fromJson(answer, PBCurrency[].class)));
-            System.out.println(pbCurrency.size());
-            for(int i = 0; i< pbCurrency.size(); i++)
-            {
-                System.out.println(pbCurrency.get(i).base_ccy + " " + pbCurrency.get(i).ccy + " " + pbCurrency.get(i).buy + " " + pbCurrency.get(i).sale);
-            }
+
             textViewCurrency1.setText(pbCurrency.get(0).base_ccy + " - " +pbCurrency.get(0).ccy);
             textViewCurrency2.setText(pbCurrency.get(1).base_ccy + " - " +pbCurrency.get(1).ccy);
             textViewCurrency3.setText(pbCurrency.get(2).base_ccy + " - " +pbCurrency.get(2).ccy);
@@ -99,6 +111,22 @@ public class PrivatBankFragment extends android.app.Fragment
             textViewCurrency2Sell.setText(pbCurrency.get(1).sale);
             textViewCurrency3Sell.setText(pbCurrency.get(2).sale);
             textViewCurrency4Sell.setText(pbCurrency.get(3).sale);
+
+            pbCurrencyCards = new ArrayList<>(Arrays.asList(gson.fromJson(answer2, PBCurrency[].class)));
+
+            textViewCardsCurrency1.setText(pbCurrencyCards.get(0).base_ccy + " - " +pbCurrencyCards.get(0).ccy);
+            textViewCardsCurrency2.setText(pbCurrencyCards.get(1).base_ccy + " - " +pbCurrencyCards.get(1).ccy);
+            textViewCardsCurrency3.setText(pbCurrencyCards.get(2).base_ccy + " - " +pbCurrencyCards.get(2).ccy);
+            textViewCardsCurrency4.setText(pbCurrencyCards.get(3).base_ccy + " - " +pbCurrencyCards.get(3).ccy);
+            textViewCardsCurrency1Buy.setText(pbCurrencyCards.get(0).buy);
+            textViewCardsCurrency2Buy.setText(pbCurrencyCards.get(1).buy);
+            textViewCardsCurrency3Buy.setText(pbCurrencyCards.get(2).buy);
+            textViewCardsCurrency4Buy.setText(pbCurrencyCards.get(3).buy);
+            textViewCardsCurrency1Sell.setText(pbCurrencyCards.get(0).sale);
+            textViewCardsCurrency2Sell.setText(pbCurrencyCards.get(1).sale);
+            textViewCardsCurrency3Sell.setText(pbCurrencyCards.get(2).sale);
+            textViewCardsCurrency4Sell.setText(pbCurrencyCards.get(3).sale);
+
             super.onPostExecute(result);
 
         }
@@ -136,10 +164,22 @@ public class PrivatBankFragment extends android.app.Fragment
         textViewCurrency3Sell = (TextView)cl.findViewById(R.id.textViewCurrency3Sell);
         textViewCurrency4Sell = (TextView)cl.findViewById(R.id.textViewCurrency4Sell);
 
-        PobierzDane serwer = new PobierzDane("https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11");
+        textViewCardsCurrency1 = (TextView)cl.findViewById(R.id.textViewCardsCurrency1);
+        textViewCardsCurrency2 = (TextView)cl.findViewById(R.id.textViewCardsCurrency2);
+        textViewCardsCurrency3 = (TextView)cl.findViewById(R.id.textViewCardsCurrency3);
+        textViewCardsCurrency4 = (TextView)cl.findViewById(R.id.textViewCardsCurrency4);
+        textViewCardsCurrency1Buy = (TextView)cl.findViewById(R.id.textViewCardsCurrency1Buy);
+        textViewCardsCurrency2Buy = (TextView)cl.findViewById(R.id.textViewCardsCurrency2Buy);
+        textViewCardsCurrency3Buy = (TextView)cl.findViewById(R.id.textViewCardsCurrency3Buy);
+        textViewCardsCurrency4Buy = (TextView)cl.findViewById(R.id.textViewCardsCurrency4Buy);
+        textViewCardsCurrency1Sell = (TextView)cl.findViewById(R.id.textViewCardsCurrency1Sell);
+        textViewCardsCurrency2Sell = (TextView)cl.findViewById(R.id.textViewCardsCurrency2Sell);
+        textViewCardsCurrency3Sell = (TextView)cl.findViewById(R.id.textViewCardsCurrency3Sell);
+        textViewCardsCurrency4Sell = (TextView)cl.findViewById(R.id.textViewCardsCurrency4Sell);
+
+        PobierzDane serwer = new PobierzDane("https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11", "https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11");
         serwer.execute();
         return cl;
-
     }
 
 
