@@ -11,8 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
+import android.widget.ScrollView;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.mostovychv.wedmand.bankassistant.R;
@@ -50,6 +52,7 @@ public class HistoryFragment extends android.app.Fragment implements View.OnClic
 
     TextView textViewCurrency1, textViewCurrency1Buy, textViewCurrency1Sell;
     Switch switchPB;
+    ScrollView scrollView;
 
     Calendar cal = Calendar.getInstance();
     int year = cal.get(Calendar.YEAR);
@@ -103,12 +106,13 @@ public class HistoryFragment extends android.app.Fragment implements View.OnClic
         @Override
         protected void onPostExecute(Void result)
         {
-            System.out.println(answer);
+            //System.out.println(answer);
             HistoricalData data = new Gson().fromJson(answer, HistoricalData.class);
-            System.out.println(data.exchangeRate.size());
+            //System.out.println(data.exchangeRate.size());
             if(data.exchangeRate.size() == 0)
             {
-
+                Toast.makeText(getActivity(), "No data", Toast.LENGTH_SHORT).show();
+                scrollView.setVisibility(View.INVISIBLE);
             }
             else {
                 if (switchPB.isChecked()) {
@@ -164,6 +168,7 @@ public class HistoryFragment extends android.app.Fragment implements View.OnClic
                     textViewCurrency1Sell.setText(currency1Sell);
                 }
             }
+            scrollView.setVisibility(View.VISIBLE);
             super.onPostExecute(result);
         }
     }
@@ -189,6 +194,9 @@ public class HistoryFragment extends android.app.Fragment implements View.OnClic
         textViewCurrency1 = (TextView)cl.findViewById(R.id.textViewCurrency1);
         textViewCurrency1Buy = (TextView)cl.findViewById(R.id.textViewCurrency1Buy);
         textViewCurrency1Sell = (TextView)cl.findViewById(R.id.textViewCurrency1Sell);
+
+        scrollView = (ScrollView)cl.findViewById(R.id.scrollView);
+        scrollView.setVisibility(View.INVISIBLE);
 
         switchPB = (Switch)cl.findViewById(R.id.switchPB);
 
