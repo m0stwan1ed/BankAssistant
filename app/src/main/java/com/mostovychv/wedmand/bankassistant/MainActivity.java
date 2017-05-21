@@ -1,6 +1,7 @@
 package com.mostovychv.wedmand.bankassistant;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -103,36 +104,34 @@ public class MainActivity extends AppCompatActivity
 
         FragmentTransaction ftrans = getFragmentManager().beginTransaction();
 
-        if (id == R.id.nav_privatBank)
-        {
+        if (id == R.id.nav_privatBank) {
             ftrans.replace (R.id.container, fPrivatBank);
-        } else if (id == R.id.nav_NBU)
-        {
+        } else if (id == R.id.nav_NBU) {
             ftrans.replace (R.id.container, fNBU);
 
-        } else if (id == R.id.nav_historia)
-        {
+        } else if (id == R.id.nav_historia) {
             ftrans.replace(R.id.container, fHistory);
 
-        } else if (id == R.id.nav_oddzialyBanku)
-        {
+        } else if (id == R.id.nav_oddzialyBanku) {
             ftrans.replace(R.id.container, fOddzialy);
 
-        } else if (id == R.id.nav_bankomatyWplatomaty)
-        {
+        } else if (id == R.id.nav_bankomatyWplatomaty) {
             ftrans.replace(R.id.container, fATM);
 
-        } else if (id == R.id.nav_avias)
-        {
+        } else if (id == R.id.nav_avias) {
             ftrans.replace(R.id.container, fAvias);
 
-        } else if (id == R.id.nav_mail)
-        {
-
-        } else if (id == R.id.nav_info)
-        {
+        } else if (id == R.id.nav_mail) {
+            Intent mailto = new Intent(Intent.ACTION_SEND);
+            mailto.setType("*/*");
+            mailto.putExtra(Intent.EXTRA_EMAIL, "wedek2525@email.com");
+            mailto.putExtra(Intent.EXTRA_SUBJECT, "Mail z aplikacji 'Bank Assistant'");
+            mailto.putExtra(Intent.EXTRA_TEXT, "Zgłaszam następujące uwagi");
+            startActivity(mailto);
+        } else if (id == R.id.nav_info) {
 
         }
+        
         ftrans.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
