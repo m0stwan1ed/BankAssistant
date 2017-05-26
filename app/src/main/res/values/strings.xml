@@ -7,6 +7,39 @@
     <string name="action_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_autorzy">AutorzyActivity</string>
+    <string name="title_activity_autorzy">Автори</string>
+    <string name="autorzy">Автори</string>
+    <string name="indeks187516">Ід.: 187516</string>
+    <string name="infoOProjekcie">Проект був створений в рамках предмету</string>
+    <string name="przedmiot">\'Програмування мобільних систем\'</string>
+    <string name="zrodloDanych">Джерело даних: https://api.privatbank.ua</string>
+    <string name="uniwersytet">Краківський Економічний Університет</string>
+    <string name="obrazek">Зображення</string>
+    <string name="vladslavMostovych">Мостович Владислав</string>
+    <string name="indeks188618">Ід: 188618</string>
+    <string name="DawidWedman">Ведман Давід</string>
+    <string name="bankomatyWplatomaty">Банкомати/Термінали</string>
+    <string name="zytomierz">Житомир</string>
+    <string name="miasto">Місто</string>
+    <string name="ulica">Вулиця</string>
+    <string name="szczorsa">Щорса</string>
+    <string name="szukaj">Пошук</string>
+    <string name="atm">ATM</string>
+    <string name="tso">TSO</string>
+    <string name="avias">Авіас</string>
+    <string name="region">Область</string>
+    <string name="adresa">Адреса</string>
+    <string name="historia">Історія</string>
+    <string name="wybierzDate">Оберіть дату</string>
+    <string name="buy">Купівля</string>
+    <string name="sell">Продаж</string>
+    <string name="currency1">Валюта</string>
+    <string name="privatbank">ПриватБанк</string>
+    <string name="nbu">НБУ</string>
+    <string name="narodowy_bank_ukrai_ski">Національний Банк України</string>
+    <string name="oddzia_y">Відділення</string>
+    <string name="cash_exchange">Курс готівковий</string>
+    <string name="cards_exchange">Курс для карток</string>
+    <string name="asystent_bankowy">Банковий Асистент</string>
+    <string name="email_value">m0stwan1ed@gmail.com</string>
 </resources>
