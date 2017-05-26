@@ -5,39 +5,39 @@
         <item
             android:id="@+id/nav_privatBank"
             android:icon="@drawable/ic_menu_privatbank"
-            android:title="PrivatBank" />
+            android:title="@string/privatbank" />
         <item
             android:id="@+id/nav_NBU"
             android:icon="@drawable/ic_menu_nbu"
-            android:title="Narodowy Bank Ukraiński" />
+            android:title="@string/narodowy_bank_ukrai_ski" />
         <item
             android:id="@+id/nav_historia"
             android:icon="@drawable/ic_menu_historia"
-            android:title="Historia" />
+            android:title="@string/historia" />
         <item
             android:id="@+id/nav_oddzialyBanku"
             android:icon="@drawable/ic_menu_oddzialy"
-            android:title="Oddziały banku" />
+            android:title="@string/oddzialybanku" />
         <item
             android:id="@+id/nav_bankomatyWplatomaty"
             android:icon="@drawable/ic_menu_bankomat"
-            android:title="Bankomaty/Wpłatomaty" />
+            android:title="@string/bankomatyWplatomaty" />
         <item
             android:id="@+id/nav_avias"
             android:icon="@drawable/ic_menu_stacjebenzynowe"
-            android:title="Stacje benzynowe 'Avias'" />
+            android:title="@string/stacje_benzynowe_avias" />
     </group>
 
-    <item android:title="Komunikacje">
+    <item android:title="@string/komunikacje">
         <menu>
             <item
                 android:id="@+id/nav_mail"
                 android:icon="@drawable/ic_menu_mail"
-                android:title="Napisz mail do autorzy" />
+                android:title="@string/napiszMailDoAutorzy" />
             <item
                 android:id="@+id/nav_info"
                 android:icon="@drawable/ic_menu_tworcy"
-                android:title="Twórcy aplikacji" />
+                android:title="@string/tworcyAplikacji" />
         </menu>
     </item>
 

@@ -1,12 +1,8 @@
 <resources>
     <string name="app_name">Bank Assistant</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Налаштування</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="title_activity_autorzy">Автори</string>
     <string name="autorzy">Автори</string>
     <string name="indeks187516">ID: 187516</string>
@@ -42,9 +38,9 @@
     <string name="cards_exchange">Курс для карток</string>
     <string name="asystent_bankowy">Банковий Асистент</string>
     <string name="email_value">m0stwan1ed@gmail.com</string>
-    <string name="oddzialybanku">Відділення банку</string>
-    <string name="stacje_benzynowe_avias">Заправки \'Авіас\'</string>
     <string name="komunikacje">Зв\'язок</string>
     <string name="napiszMailDoAutorzy">Написати лист до авторів</string>
+    <string name="oddzialybanku">Відділення банку</string>
+    <string name="stacje_benzynowe_avias">Заправки \'Авіас\'</string>
     <string name="tworcyAplikacji">Розробники додатку</string>
 </resources>
