@@ -102,33 +102,78 @@ public class PrivatBankFragment extends android.app.Fragment
             textViewCurrency1.setText(pbCurrency.get(0).base_ccy + " - " +pbCurrency.get(0).ccy);
             textViewCurrency2.setText(pbCurrency.get(1).base_ccy + " - " +pbCurrency.get(1).ccy);
             textViewCurrency3.setText(pbCurrency.get(2).base_ccy + " - " +pbCurrency.get(2).ccy);
-            textViewCurrency4.setText(pbCurrency.get(3).base_ccy + " - " +pbCurrency.get(3).ccy);
+            try
+            {
+                textViewCurrency4.setText(pbCurrency.get(3).base_ccy + " - " +pbCurrency.get(3).ccy);
+            }
+            catch(java.lang.IndexOutOfBoundsException e)
+            {
+                textViewCurrency4.setText("");
+            }
+
             textViewCurrency1Buy.setText(pbCurrency.get(0).buy);
             textViewCurrency2Buy.setText(pbCurrency.get(1).buy);
             textViewCurrency3Buy.setText(pbCurrency.get(2).buy);
-            textViewCurrency4Buy.setText(pbCurrency.get(3).buy);
+            try
+            {
+                textViewCurrency4Buy.setText(pbCurrency.get(3).buy);
+            }
+            catch(java.lang.IndexOutOfBoundsException e)
+            {
+                textViewCurrency4Buy.setText("");
+            }
+
             textViewCurrency1Sell.setText(pbCurrency.get(0).sale);
             textViewCurrency2Sell.setText(pbCurrency.get(1).sale);
             textViewCurrency3Sell.setText(pbCurrency.get(2).sale);
-            textViewCurrency4Sell.setText(pbCurrency.get(3).sale);
+            try
+            {
+                textViewCurrency4Sell.setText(pbCurrency.get(3).sale);
+            }
+            catch(java.lang.IndexOutOfBoundsException e)
+            {
+                textViewCurrency4Sell.setText("");
+            }
 
             pbCurrencyCards = new ArrayList<>(Arrays.asList(gson.fromJson(answer2, PBCurrency[].class)));
 
             textViewCardsCurrency1.setText(pbCurrencyCards.get(0).base_ccy + " - " +pbCurrencyCards.get(0).ccy);
             textViewCardsCurrency2.setText(pbCurrencyCards.get(1).base_ccy + " - " +pbCurrencyCards.get(1).ccy);
             textViewCardsCurrency3.setText(pbCurrencyCards.get(2).base_ccy + " - " +pbCurrencyCards.get(2).ccy);
-            textViewCardsCurrency4.setText(pbCurrencyCards.get(3).base_ccy + " - " +pbCurrencyCards.get(3).ccy);
+            try
+            {
+                textViewCardsCurrency4.setText(pbCurrencyCards.get(3).base_ccy + " - " +pbCurrencyCards.get(3).ccy);
+            }
+            catch(java.lang.IndexOutOfBoundsException e)
+            {
+                textViewCardsCurrency4.setText("");
+            }
+
             textViewCardsCurrency1Buy.setText(pbCurrencyCards.get(0).buy);
             textViewCardsCurrency2Buy.setText(pbCurrencyCards.get(1).buy);
             textViewCardsCurrency3Buy.setText(pbCurrencyCards.get(2).buy);
-            textViewCardsCurrency4Buy.setText(pbCurrencyCards.get(3).buy);
+            try
+            {
+                textViewCardsCurrency4Buy.setText(pbCurrencyCards.get(3).buy);
+            }
+            catch(java.lang.IndexOutOfBoundsException e)
+            {
+                textViewCardsCurrency4Buy.setText("");
+            }
+
             textViewCardsCurrency1Sell.setText(pbCurrencyCards.get(0).sale);
             textViewCardsCurrency2Sell.setText(pbCurrencyCards.get(1).sale);
             textViewCardsCurrency3Sell.setText(pbCurrencyCards.get(2).sale);
-            textViewCardsCurrency4Sell.setText(pbCurrencyCards.get(3).sale);
+            try
+            {
+                textViewCardsCurrency4Sell.setText(pbCurrencyCards.get(3).sale);
+            }
+            catch(java.lang.IndexOutOfBoundsException e)
+            {
+                textViewCardsCurrency4Sell.setText("");
+            }
 
             super.onPostExecute(result);
-
         }
     }
 
