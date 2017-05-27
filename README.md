@@ -1,5 +1,5 @@
 ## Bank Assistant
-Plik instalacyjny [BankAssistant.apk]
+
 ### Zespół:
 - Vladyslav Mostovych, 187516, KrDZIs3013Io
 - Dawid Wedman, 188618, KrDZIs3013Io
@@ -18,9 +18,9 @@ Aplikacja pozwala użytkownikowi otrzymać informację o kursach walut w oddzia�
 - Informacja o stacjach benzynowych („Avias”) na terytorium Ukrainy;
 - Aplikacja podtrzymuje dwa języki - polski oraz ukraiński;
 
-### Installation
+### Instalacja
 
-Tutaj będzie link do APK
+Plik instalacyjny [BankAssistant.apk]
 
 ### API
 
@@ -29,8 +29,10 @@ Aplikacja pobiera dane z serwera za pomocą publicznego API banku „PrivatBank�
 ### Linki
 - Strona internetowa banku (wersja w języku angielskim) - [PrivatBankEn]
 - Strona w Wikipedii o banku - [PrivatBankWiki]
+- Dokumentacja API w polskiej wersji językowej - [DokumentacjaPL]
 
 [PrivatBankEn]: <http://en.privatbank.ua>
 [PrivatBankWiki]: <https://pl.wikipedia.org/wiki/PrywatBank>
 [PrivatBankApi]: <https://api.privatbank.ua>
 [BankAssistant.apk]: <https://github.com/m0stwan1ed/BankAssistant/raw/265ab1bde2321991c6ffe42ddcf176b427df417e/BankAssistant.apk>
+[DokumentacjaPL]: <https://github.com/m0stwan1ed/BankAssistant/raw/master/Dokumentcja%20API.pdf>
