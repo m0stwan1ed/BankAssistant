@@ -26,6 +26,11 @@ Plik instalacyjny [BankAssistant.apk]
 
 Aplikacja pobiera dane z serwera za pomocą publicznego API banku „PrivatBank” dla deweloperów: [PrivatBankApi].
 
+### Użyte biblioteki
+
+Google Gson - open-source bibloiteka dla serializacji oraz deserializacji plików w formacie JSON
+Link - [GoogleGson]
+
 ### Linki
 - Strona internetowa banku (wersja w języku angielskim) - [PrivatBankEn]
 - Strona w Wikipedii o banku - [PrivatBankWiki]
@@ -36,3 +41,4 @@ Aplikacja pobiera dane z serwera za pomocą publicznego API banku „PrivatBank�
 [PrivatBankApi]: <https://api.privatbank.ua>
 [BankAssistant.apk]: <https://github.com/m0stwan1ed/BankAssistant/raw/265ab1bde2321991c6ffe42ddcf176b427df417e/BankAssistant.apk>
 [DokumentacjaPL]: <https://github.com/m0stwan1ed/BankAssistant/raw/master/Dokumentcja%20API.pdf>
+[GoogleGson]: <https://github.com/google/gson>
