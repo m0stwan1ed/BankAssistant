@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bank Assistant</string>
+    <string name="DawidWedman">Dawid Wedman</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="adresa">Adres</string>
+    <string name="asystent_bankowy">Asystent Bankowy</string>
+    <string name="atm">ATM</string>
+    <string name="autorzy">Autorzy</string>
+    <string name="avias">Avias</string>
+    <string name="bankomatyWplatomaty">Bankomaty/Wpłatomaty</string>
+    <string name="buy">Kupno</string>
+    <string name="cards_exchange">Kurs dla kart bankowych</string>
+    <string name="cash_exchange">Kurs gotówkowy</string>
+    <string name="currency1">Waluta</string>
+    <string name="email_value">wedek2525@gmail.com</string>
+    <string name="historia">Historia</string>
+    <string name="indeks187516">Nr.: 187516</string>
+    <string name="indeks188618">Nr.: 188618</string>
+    <string name="infoOProjekcie">Projekt stworzony w ramach przedmiotu</string>
+    <string name="miasto">Miasto</string>
+    <string name="narodowy_bank_ukrai_ski">Narodowy Bank Ukraiński</string>
+    <string name="nbu">NBU</string>
+    <string name="obrazek">Obrazek</string>
+    <string name="oddzia_y">Oddziały</string>
+    <string name="privatbank">PrivatBank</string>
+    <string name="przedmiot">\'Programowanie systemów mobilnych\'</string>
+    <string name="region">Region</string>
+    <string name="sell">Sprzedaż</string>
+    <string name="szukaj">Szukaj</string>
+    <string name="title_activity_autorzy">Autorzy</string>
+    <string name="tso">TSO</string>
+    <string name="ulica">Ulica</string>
+    <string name="uniwersytet">Uniwersytet Ekonomiczny w Krakowie</string>
+    <string name="vladslavMostovych">Vladyslav Mostovych</string>
+    <string name="wybierzDate">Wybierz datę</string>
+    <string name="zrodloDanych">Źródłó danych: https://api.privatbank.ua</string>
+    <string name="zytomierz" translatable="false">Житомир</string>
+    <string name="szczorsa">Щорса</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="komunikacje">Komunikacje</string>
+    <string name="napiszMailDoAutorzy">Napisz mail do autorzy</string>
+    <string name="oddzialybanku">Oddziały banku</string>
+    <string name="stacje_benzynowe_avias">Stacje benzynowe \'Avias\'</string>
+    <string name="tworcyAplikacji">Twórcy aplikacji</string>
+</resources>
