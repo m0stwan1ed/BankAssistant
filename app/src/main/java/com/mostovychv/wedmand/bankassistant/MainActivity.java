@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity
         fNBU = new NBUFragment();
         fOddzialy = new OddzialyFragment();
         fPrivatBank = new PrivatBankFragment();
+
+        FragmentTransaction ftrans = getFragmentManager().beginTransaction();
+        ftrans.replace (R.id.container, fPrivatBank);
+        ftrans.commit();
     }
 
     @Override
@@ -94,9 +98,8 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_privatBank) {
             ftrans.replace (R.id.container, fPrivatBank);
-        } else if (id == R.id.nav_NBU) {
-            ftrans.replace (R.id.container, fNBU);
-
+        //} else if (id == R.id.nav_NBU) {
+        //    ftrans.replace (R.id.container, fNBU);
         } else if (id == R.id.nav_historia) {
             ftrans.replace(R.id.container, fHistory);
 
