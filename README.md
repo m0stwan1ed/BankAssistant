@@ -39,6 +39,6 @@ Link - [GoogleGson]
 [PrivatBankEn]: <http://en.privatbank.ua>
 [PrivatBankWiki]: <https://pl.wikipedia.org/wiki/PrywatBank>
 [PrivatBankApi]: <https://api.privatbank.ua>
-[BankAssistant.apk]: <https://github.com/m0stwan1ed/BankAssistant/raw/265ab1bde2321991c6ffe42ddcf176b427df417e/BankAssistant.apk>
+[BankAssistant.apk]: <https://github.com/m0stwan1ed/BankAssistant/raw/master/BankAssistant.apk>
 [DokumentacjaPL]: <https://github.com/m0stwan1ed/BankAssistant/raw/master/Dokumentcja%20API.pdf>
 [GoogleGson]: <https://github.com/google/gson>
